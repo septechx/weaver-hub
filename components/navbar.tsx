@@ -24,8 +24,25 @@ export function NavBar() {
     <>
       <div className="bg-primary-foreground grid min-w-full grid-cols-3 grid-rows-1 items-center px-4 py-2">
         <div className="relative w-fit">
-          <Link href="/">
+          <Link href="/" className="flex">
             <Logo fill="var(--heavy-accent)" height={48} width={96} />
+            <svg
+              width="16"
+              height="48"
+              viewBox="0 0 16 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="16"
+                y1="0"
+                x2="0"
+                y2="48"
+                stroke="var(--accent)"
+                strokeWidth="2"
+              />
+            </svg>
+            <i className="text-heavy-accent flex items-center text-3xl">Hub</i>
           </Link>
           {path === "/" && (
             <motion.div
